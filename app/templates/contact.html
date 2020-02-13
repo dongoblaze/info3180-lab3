@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="head">
+    <h1> <strong>Contact Form</strong></h1>
+
+    <form method="post" action="{{ url_for('contact') }}">
+        {{ form.csrf_token }}
+        <div class="form-group">
+            {{ form.name.label }} {{ form.name(class="form-control") }}
+        </div>
+        <div class="form-group">
+        </div>
+        </div>
+        {{ form.email.label }} {{ form.email(class="form-control",placeholder="blaze@example.com ) }}
+        </div>
+        <div class="form-group">
+            {{ form.subject.label }} {{ form.subject(class="form-control") }}
+        <div class="form-group">
+            {{ form.message.label }} {{ form.message(class="form-control") }}
+        </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+  
+
+
+{% endblock %}
+
